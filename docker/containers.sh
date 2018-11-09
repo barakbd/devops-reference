@@ -6,7 +6,7 @@ docker-compose up
 docker-compose down # will rm containers 
 
 # look inside running container
-docker exec -it 9adffb2a6394 ls
+docker exec -it $(docker ps -aqf name=mongo) bash
 ########## CLEANUP CONTAINERS ###############
 
 docker container stop 1fa4ab2cf395
